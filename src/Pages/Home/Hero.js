@@ -1,5 +1,6 @@
 import React from "react"; 
 import chair from "../../images/chair.png"
+import ActionBtn from "../Shared/ActionBtn";
 const Hero = () => {
   return (
     <div className=" " >
@@ -18,7 +19,7 @@ const Hero = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button class="btn bg-gradient-to-r from-primary to-secondary text-accent border-0">Get Started</button>
+            <ActionBtn class="">Get Started</ActionBtn>
           </div>
         </div>
       </div>
