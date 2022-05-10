@@ -4,8 +4,8 @@ import ActionBtn from "../Shared/ActionBtn";
 const Hero = () => {
   return (
     <div className=" " >
-      <div class="hero min-h-screen ">
-      <div class="hero-overlay bg-[url('https://i.ibb.co/NjjN6sN/bg.png')] bg-opacity-20"></div>
+      <div class="hero min-h-screen  bg-[url('https://i.ibb.co/NjjN6sN/bg.png')] ">
+      
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img
             src={chair}
