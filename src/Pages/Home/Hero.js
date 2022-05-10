@@ -2,13 +2,13 @@ import React from "react";
 import chair from "../../images/chair.png"
 const Hero = () => {
   return (
-    <div className="" >
-      <div class="hero min-h-screen bg-[url('https://i.ibb.co/NjjN6sN/bg.png')]">
-      <div class="hero-overlay   bg-opacity-20"></div>
+    <div className=" " >
+      <div class="hero min-h-screen ">
+      <div class="hero-overlay bg-[url('https://i.ibb.co/NjjN6sN/bg.png')] bg-opacity-20"></div>
         <div class="hero-content flex-col lg:flex-row-reverse">
           <img
             src={chair}
-            class="max-w-xl rounded-lg shadow-2xl"
+            class="max-w-sm md:max-w-lg rounded-lg shadow-2xl"
             alt="chair imgae"
           />
           <div>
