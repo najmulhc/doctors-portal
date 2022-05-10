@@ -4,7 +4,7 @@ import cavity from '../../images/cavity.png';
 import white from "../../images/whitening.png"
 const Services = () => {
   return (
-    <section className="my-8 container mx-auto">
+    <section className="my-16 container mx-auto">
       <h2 className="text-primary uppercase text-xl text-center font-bold ">
         services
       </h2>

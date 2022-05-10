@@ -27,7 +27,7 @@ const Info = () => {
         },
     ]
     return (
-        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3'>
+        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 mb-16'>
             {
                 infos.map(info => <SingleInfo info={info} />)
             }

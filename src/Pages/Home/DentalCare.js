@@ -3,7 +3,7 @@ import treatment from "../../images/treatment.png"
 import ActionBtn from "../Shared/ActionBtn";
 const DentalCare = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto my-16">
       <div class=" bg-white">
         <div class=" md:grid-cols-2 md:grid">
           <img

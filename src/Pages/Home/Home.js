@@ -8,14 +8,14 @@ import Testimonials from './Testimonials';
 
 const Home = () => {
     return (
-        <div>
+        <main>
            <Hero/>
            <Info/>
            <Services/>
            <DentalCare/>
             <Testimonials/>
             <Contact/>
-        </div>
+        </main>
     );
 };
 
