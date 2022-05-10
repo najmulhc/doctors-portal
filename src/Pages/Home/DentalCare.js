@@ -4,7 +4,7 @@ import ActionBtn from "../Shared/ActionBtn";
 const DentalCare = () => {
   return (
     <section className="container mx-auto">
-      <div class=" min-h-screen bg-white">
+      <div class=" bg-white">
         <div class=" md:grid-cols-2 md:grid">
           <img
             src={treatment}
