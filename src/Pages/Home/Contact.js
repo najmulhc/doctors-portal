@@ -13,11 +13,11 @@ const Contact = () => {
           <input
             type="text"
             placeholder="Email Address"
-            class="input w-full my-2"
+            className="input w-full my-2"
           />
-          <input type="email" placeholder="Subject" class="input w-full my-2" />
+          <input type="email" placeholder="Subject" className="input w-full my-2" />
           <textarea
-            class="textarea w-full my-2 h-36"
+            className="textarea w-full my-2 h-36"
             placeholder="Your message"
           ></textarea>
           <div className="w-full flex justify-center"> <ActionBtn>submit</ActionBtn></div>
