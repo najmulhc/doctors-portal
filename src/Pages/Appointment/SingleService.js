@@ -1,7 +1,7 @@
 import React from 'react';
 import ActionBtn from '../Shared/ActionBtn';
 
-const SingleService = ({service}) => {
+const SingleService = ({service, selected}) => {
     const {name, slots} = service;
     const task= () => {
         console.log("task is called");
@@ -12,8 +12,12 @@ const SingleService = ({service}) => {
         <h2 className="text-primary uppercase text-xl text-center font-bold ">{name}</h2>
           <p className='text-accent text-center font-medium'>{slots[0] ? slots[0] : "No slots found"}</p>
           <p className='text-accent text-center uppercase font-medium'>{slots[0] ? slots.length : 0} {slots.length >1 ? "Spaces" : "Space"} available</p>
-          <div class="card-actions justify-center">
-           <ActionBtn  refCard="#my-modal-2" >Book now</ActionBtn>
+          <div className="card-actions justify-center">
+          <label 
+          for="my-modal-3"
+      
+          onClick={() => selected(service)}
+           class="btn bg-gradient-to-r from-primary to-secondary disabled text-white border-0"> book now</label>
            
           </div>
         </div>

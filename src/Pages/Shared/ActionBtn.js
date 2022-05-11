@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const ActionBtn = ({children, refCard}) => {
+const ActionBtn = ({children}) => {
     return (
-         <Link   to={refCard} className='btn bg-gradient-to-r from-primary to-secondary text-white border-0'>{children}</Link>
+         <button    className='btn bg-gradient-to-r from-primary to-secondary text-white border-0'>{children}</button>
     );
 };
 
