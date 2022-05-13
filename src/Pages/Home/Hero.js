@@ -3,9 +3,8 @@ import chair from "../../images/chair.png";
 import ActionBtn from "../Shared/ActionBtn";
 const Hero = () => {
   return (
-    <div className=" " >
+    <div className=" ">
       <div className="hero min-h-screen  bg-[url('https://i.ibb.co/NjjN6sN/bg.png')] ">
-      
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={chair}
@@ -13,7 +12,9 @@ const Hero = () => {
             alt="chair imgae"
           />
           <div>
-            <h1 className="text-5xl text-accent font-bold">Your new smiles starts here</h1>
+            <h1 className="text-5xl text-accent font-bold">
+              Your new smiles starts here
+            </h1>
             <p className="py-6 md:w-2/3">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae

@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link to="/" className="hover:btn-accent">Contact</Link>
       </li>
       <li>
-        <Link to="/" className="hover:btn-accent">Login</Link>
+        <Link to="/login" className="hover:btn-accent">Login</Link>
       </li>
     </>
   );
