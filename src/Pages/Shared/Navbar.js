@@ -28,7 +28,7 @@ const Navbar = () => {
         <Link to="/" className="hover:btn-accent">Contact</Link>
       </li>
       <li>
-        {user? <button className="hover:btn-accent" onClick={logOut}>Log Out</button>:<Link to="/login" className="hover:btn-accent">Log In</Link>}
+        {user? <button className="hover:btn-accent" onClick={logOut}>{user.displayName} (Log Out)</button>:<Link to="/login" className="hover:btn-accent">Log In</Link>}
       </li>
     </>
   );

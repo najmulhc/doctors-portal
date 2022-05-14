@@ -1,8 +1,11 @@
 import format from "date-fns/format";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import ActionBtn from "../Shared/ActionBtn";
 const BookingModal = ({ service }) => {
-    
+    const [user] = useAuthState(auth);
+    const userName = user.email;
   return (
     <>
       <input type="checkbox" id="my-modal-3" class="modal-toggle" />
@@ -29,7 +32,8 @@ const BookingModal = ({ service }) => {
             </select>
             <input
               type="text"
-              placeholder="Your Name"
+              value={userName}
+              disabled
               class="input w-full my-2 border-2 border-gray-400"
             />
             <input
