@@ -8,8 +8,8 @@ const GoogleSignIn = () => {
   };
 
   return (
-    <div class="flex flex-col w-full border-opacity-50">
-      <div class="divider">OR</div>
+    <div className="flex flex-col w-full border-opacity-50">
+      <div className="divider">OR</div>
       <button className="w-full btn btn-accent" onClick={signInGoogle}>
         Continue with Google
       </button>

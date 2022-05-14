@@ -41,7 +41,7 @@ const Testimonials = () => {
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1">
           {
-              reviews.map(review => <SingleReview review={review} />)
+              reviews.map(review => <SingleReview review={review} key={review.name}/>)
           }
       </div>
     </section>

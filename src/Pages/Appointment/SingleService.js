@@ -3,9 +3,7 @@ import ActionBtn from '../Shared/ActionBtn';
 
 const SingleService = ({service, selected}) => {
     const {name, slots} = service;
-    const task= () => {
-        console.log("task is called");
-    }
+  
     return (
         <div class="card w-full bg-white p-4 shadow-xl">
         <div class="card-body">

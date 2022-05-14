@@ -6,7 +6,7 @@ import Login from "../Login/Login";
 const RouteProtector = ({ children }) => {
   const [user] = useAuthState(auth);
   const location = useLocation().pathname;
-  console.log(location);
+
  
   if (user) {
     return children;
