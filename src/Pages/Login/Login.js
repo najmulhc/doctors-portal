@@ -1,12 +1,28 @@
 import React from "react";
 import GoogleSignIn from "../Shared/GoogleSignIn";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-const Login = () => {
+import { Link, useNavigate } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
+const Login = ({cameFrom}) => {
+  console.log(cameFrom);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
+  const navigate = useNavigate();
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
   const onSubmit = data => {
-
+    signInWithEmailAndPassword(data.email, data.password);
+  }
+  if(user){
+     if(cameFrom){
+       navigate(cameFrom);
+     } else{
+       navigate('/')
+     }
   }
   return (
     <main className="w-full min-h-screen flex justify-center items-center">

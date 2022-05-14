@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import GoogleSignIn from "../Shared/GoogleSignIn";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
@@ -27,8 +27,9 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
     }
   };
-  if(user.user){
+  if(user?.user){
       toast.success("user created!");
+      return(<Navigate to='/' />)
   }
   if(loading){
       return (
@@ -37,6 +38,7 @@ const Register = () => {
           </div>
       )
   }
+
   return (
     <main className="w-full min-h-screen flex justify-center items-center">
       <div class="card w-96 bg-base-100 shadow-xl">
@@ -62,9 +64,35 @@ const Register = () => {
               type="password"
               placeholder="enter password here"
               class="input input-bordered w-full max-w-xs"
-              {...register("password", { required: true })}
+              {...register("password", { 
+                minLength: {
+                    value: 7,
+                    message: 'password should have  to be 7 characters long' // JS only: <p>error message</p> TS only support string
+                  },
+                  pattern:{
+                      value:/[A-Z]/,
+                      message:"You need to have at least one capital letter"
+                  },
+                  pattern:{
+                      value:/[a-z]/,
+                      message:"You need to have at least one small letter"
+                  },
+                  pattern:{
+                      value:/[0-9]/,
+                      message:"You need to have at least one number"
+                  },
+                  
+              
+                  required:{
+                      value:true, 
+                      message:"You must have to put a password"
+                  }
+                })}
             />
-            <label class="label mt-4">
+            <label className="label">
+                <span className="label-text text-red-600">{errors?.password?.message}</span>
+            </label>
+            <label class="label ">
               <span class="label-text">Confirm Password</span>
             </label>
             <input
